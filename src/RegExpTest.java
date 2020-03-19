@@ -1,5 +1,6 @@
 import static org.testng.Assert.assertEquals;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -17,8 +18,9 @@ public class RegExpTest {
         {"http://192.168.1.1/index.html", "192.168.1.1"},
         {"This text contains a valid IP address 254.254.254.254, find it!", "254.254.254.254"},
         {"IP could not have negative numbers like -1.-2.-3.-4", ""},
-        {" Invalid IP: 300.300.300.300!", ""}
-        // TODO add 2 more test data here
+        {" Invalid IP: 300.300.300.300!", ""},
+            {"this is my ip 192.168.0.7", "192.168.0.7"},
+            {"IP misspell 255.256.255.255",""}
     };
   }
 
